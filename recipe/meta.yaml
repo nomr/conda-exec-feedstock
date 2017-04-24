@@ -22,7 +22,6 @@ about:
     home: https://github.com/nomr/conda-exec
     license: BSD 3-Clause
     license_family: BSD
-    license_file: ${RECIPE_DIR}/LICENSE
     summary: Executes a command inside a conda environment
 
     dev_url: https://github.com/nomr/conda-exec
