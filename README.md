@@ -14,9 +14,9 @@ Summary: Executes a command inside a conda environment
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/conda-exec-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/conda-exec-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/conda-exec-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/conda-exec-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+Linux: [![Circle CI](https://circleci.com/gh/nomr/conda-exec-feedstock.svg?style=shield)](https://circleci.com/gh/nomr/conda-exec-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/nomr/conda-exec-feedstock.svg?branch=master)](https://travis-ci.org/nomr/conda-exec-feedstock)
+Windows: ![](https://cdn.rawgit.com/nomr/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
 
 Current release info
 ====================
@@ -57,7 +57,7 @@ opportunity to confirm that the changes result in a successful build. Once
 merged, the recipe will be re-built and uploaded automatically to the
 `nomr` channel, whereupon the built conda packages will be available for
 everybody to install and use from the `nomr` channel.
-Note that all branches in the conda-forge/conda-exec-feedstock are
+Note that all branches in the nomr/conda-exec-feedstock are
 immediately built and any created packages are uploaded, so PRs should be based
 on branches in forks and branches in the main repository should only be used to
 build distinct package versions.
