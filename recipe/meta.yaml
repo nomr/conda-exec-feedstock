@@ -4,19 +4,31 @@ package:
     name: conda-exec
     version: {{ version }}
 
+source:
+    git_url: https://github.com/nomr/conda-exec.git
+    git_rev: {{ version }}
+
 build:
     number: 0
     skip: True  # [win]
-
-source:
-    path: ../
 
 requirements:
     run:
         - conda
 
+test:
+    commands:
+        - conda-exec -h
+
 about:
     home: https://github.com/nomr/conda-exec
-    license: MIT
+    license: BSD 3-Clause
+    license_family: BSD
     license_file: LICENSE
+    summary: Executes a command inside a conda environment
 
+    dev_url: https://github.com/nomr/conda-exec
+
+extra:
+    recipe-maintainers:
+        - sodre
