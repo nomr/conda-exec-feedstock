@@ -3,9 +3,9 @@ set -eo pipefail
 
 usage() {
     cat << _EOF
-Usage:  conda-exec [OPTIONS] ENVIRONMENT COMMAND [ARG...]
+Usage:  conda exec [OPTIONS] ENVIRONMENT COMMAND [ARG...]
 
-Run a command in a conda environment
+Run a command in an existing conda environment
 
 Options:
   -h        Print usage
