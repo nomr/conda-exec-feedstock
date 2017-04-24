@@ -1,0 +1,22 @@
+{% set version = "0.1.0" %}
+
+package:
+    name: conda-exec
+    version: {{ version }}
+
+build:
+    number: 0
+    skip: True  # [win]
+
+source:
+    path: ../
+
+requirements:
+    run:
+        - conda
+
+about:
+    home: https://github.com/nomr/conda-exec
+    license: MIT
+    license_file: LICENSE
+
