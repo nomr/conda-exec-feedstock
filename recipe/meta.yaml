@@ -1,33 +1,50 @@
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
     name: conda-exec
     version: {{ version }}
 
 source:
-    git_url: https://github.com/nomr/conda-exec.git
-    git_rev: {{ version }}
+    path: .
 
 build:
     number: 0
     skip: True  # [win]
+    script:
+      - install conda-exec.sh ${PREFIX}/bin/conda-exec
 
 requirements:
     run:
         - conda
 
 test:
+    files:
+        - tests
     commands:
         - conda-exec -h
+        - install tests/num-args.sh $PREFIX/bin/num-args
+        - num-args 0
+        - set -x
+        - conda-exec -- $PREFIX num-args 0
+        - num-args 1 one
+        - conda-exec -- $PREFIX num-args 1 one
+        - num-args 2 one two
+        - conda-exec -- $PREFIX num-args 2 one two
+        - num-args 1 "one two"
+        - conda-exec -- $PREFIX num-args 1 \'one two\'
+
 
 about:
-    home: https://github.com/nomr/conda-exec
+    home: https://github.com/conda-forge/conda-exec-feedstock
     license: BSD 3-Clause
     license_family: BSD
     license_file: LICENSE
     summary: Executes a command inside a conda environment
 
-    dev_url: https://github.com/nomr/conda-exec
+    description: |
+      conda-exec activates the program's conda environment before executing it.
+
+    dev_url: https://github.com/conda-forge/conda-exec-feedstock
 
 extra:
     recipe-maintainers:
