@@ -63,4 +63,4 @@ fi
 
 shift 1
 
-exec $*
+exec "$@"
